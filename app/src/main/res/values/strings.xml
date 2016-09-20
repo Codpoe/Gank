@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Gank</string>
+
+    <!--meizhi-->
+    <string name="toolbar_title">Gank</string>
+    <string name="success">加载成功</string>
+    <string name="footer_null">我也是有底线的</string>
+
+    <!--drawer-->
+    <string name="meizhi">妹纸</string>
+
+    <!--picture-->
+    <string name="share">分享</string>
+    <string name="copy_url">复制链接</string>
+    <string name="save">保存到手机</string>
+    <string name="share_pic">分享妹纸</string>
+    <string name="copy_success">已复制到剪贴板</string>
+    <string name="save_success_to">成功保存到：</string>
+    <string name="save_error">出错啦！请再试一下：</string>
+    <string name="permission_error">请到「设置-应用-权限管理」添加相应权限</string>
+
+</resources>

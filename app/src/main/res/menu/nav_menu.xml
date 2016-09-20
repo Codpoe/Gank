@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/meizhi_nav_menu_item"
+            android:icon="@drawable/ic_girl"
+            android:title="@string/meizhi"
+            android:checked="true"/>
+
+    </group>
+
+</menu>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="me.codpoe.gank.meizhi.MeizhiActivity">
+
+    <!--content-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coor_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:title="@string/meizhi"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/meizhi_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/meizhi_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/refresh_lay"
+            app:layout_anchorGravity="bottom|right"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            app:layout_behavior="me.codpoe.gank.widget.ScrollAwareFABBehavior"
+            android:src="@drawable/ic_up_to_top_white_24dp"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--drawer-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"/>
+
+</android.support.v4.widget.DrawerLayout>
